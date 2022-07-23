@@ -25,7 +25,7 @@ const customers = [
 //Display the message when the url consist of '/'
 
 
-app.get('/', (req, res) => {     //req in this case will be the url localhost:8080/
+app.get('/', (req, res) => {     //req in this case will be the url localhost:8080/    This can be tried out in postman for testing
 	res.send('Welcome to Demo for REST API');
 });
 
@@ -36,7 +36,7 @@ res.send(customers);
 });
 
 //Display the information of Specific customer when you mention the id.
-app.get('/api/customers/ :id', (req, res) => { 
+app.get('/api/customers/ :id', (req, res) => {       //req in this case will be the url localhost:8080/api/customers/3   (3 is the cust id)
 
 	const customer = customers.find(c => c.id === parseInt(req.params.id));
 	//if there is no valid customer id, then display an error with the following
